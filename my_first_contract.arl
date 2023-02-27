@@ -1,0 +1,15 @@
+archetype my_first_contract
+
+variable store : int = 0
+
+entry increment(val : int) {
+  store += val
+}
+
+entry decrement(val : int) {
+  store -= val
+}
+
+entry reset() {
+  store := 0
+}
