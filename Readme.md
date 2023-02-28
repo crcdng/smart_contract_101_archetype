@@ -130,9 +130,9 @@ In general, we write the smart contract code in Archetype, compile it to Michels
 
 ### Welcome to Ghostnet 
 
-The Ghostnet is a copy of the real Tezos blockchain (called 'Mainnet') made for coding and testing. It does not carry any real value. Technically it is like the 'real' chain, therefore every transaction on Ghostnet requires an account.  
+The Ghostnet is a copy of the real Tezos blockchain (which is called 'Mainnet') made for coding and testing. It does not carry any real value. Technically it is like the 'real' chain, therefore every transaction on Ghostnet requires an account.  
 
-Our scenario requires two roles: we have the developer, who publishes the contract. This is also called the 'admin' of the contract. For this one, we use an account provided by Archetype. The second role is a user of the contract. We will create that one with a wallet in the webbrowser. 
+Our scenario requires two roles: the first is the developer, who publishes the contract. This is also called the 'admin' of the contract. For this one, we use an account provided by Archetype. The second role is a user of the contract. We will create that one with a wallet in the webbrowser. 
 
 First the admin account. In the Terminal, type:
 
@@ -147,15 +147,15 @@ Public  key:            edpkurPsQ8eUApnLUJ9ZPDvu98E8VNj4KtJa1aZr16Cr5ow5VHKnz4
 Balance on ghost:       825.397078 ꜩ
 ```
 
-This is an account for coding and testing that is provided by Archetype. Notice the name 'bob' used for the account 'tz1aSkwEot3L2kmUvcoxzjMomb9mvBNuzFK6'. It has a balance of 825.397078 (fake) tez on Ghostnet. Tez is the cryptocurrency of Tezos.
+This is an account that is provided by Archetype for coding and testing. The name 'bob' is used for the account 'tz1aSkwEot3L2kmUvcoxzjMomb9mvBNuzFK6'. It has a balance of 825.397078 (fake) tez on Ghostnet. Tez is the cryptocurrency of Tezos.
 
 *Note: treat all accounts you use in this workshop as 'throwaway accounts'. Used them only for coding and testing on Ghostnet. Use different accounts with proper security for everything else.* 
 
-To deploy (publish) the smart contract, we need a client. We also get this    
+To deploy (publish) the smart contract, we need a node. Archetype gives us a public node that we can use:  
 
 `completium-cli show endpoint`
 
-The output looks like this:
+The output is:
 
 ```
 Current network: ghost
@@ -164,11 +164,13 @@ Current endpoint: https://ghostnet.ecadinfra.com
 
 ### deploy the smart contract
 
-We have now the three ingredients necesseary to deploy (publish) our smart contract:
+We now have the three ingredients required to deploy our smart contract:
 
-* an account (provided by Archetype)
-* a smart contract (or code, compiled to Michelson)
+* an account, provided by Archetype
+* the smart contract code
 * a (public) node that allows us to deploy the smart contract to the Ghostnet blockchain
+
+Let's deploy:
 
 `completium-cli deploy my_first_contract.arl`
 
@@ -196,26 +198,31 @@ https://better-call.dev/ghostnet/KT1P43L56ADABdf4xHq2KdF1nK6n7irXn5Sq
 
 Congrats: you have deployed your first smart contract.
 
+*Note: In a real project you would test the functions of the smart contract thoroughly and also test the Michelson code on a local, simulated blockchain.*
+
+*Note: I have also encountered error messages, for example:*    
+*Http error response: (500) [{"kind":"temporary","id":"failure","msg":"Unknown branch (BKignGo3oUkf), cannot inject the operation."}]*    
+*If you get an error like this, try again.* 
+
+*Waiting for confirmation of origination for KT1BJnXyEFx5349D15RsmFE4GCjW8wfYKQif ...
+Http error response: (404)*    
+*If you get an error like this, go to the next step.*
+
 ### Exploring the smart contract
 
-The confirmation contains the addreess of the smart contract, starting with 'KT1..'.
+The confirmation contains the address of the smart contract, starting with 'KT1..'.
 
-The last line above gives us a link to the better-call.dev tool, a blockchain explorer that  smart contract
+The last line above gives us a link to the 'better-call.dev' tool, where we can inspect our contract on the blockchain (your link is different):
 
 https://better-call.dev/ghostnet/KT1P43L56ADABdf4xHq2KdF1nK6n7irXn5Sq/operations
 
+This gives us a lot of information about the contract we just deployed. Let's check that the creator is the address of the account. Then, select 'Interact', and call the entry points of the smart contract. Convine yourself that it works as expected.
 
-https://ghostnet.tzkt.io/
+Congrats: you have... 
 
-This gives us a lot of information about the Ghostnet. 
-
-Let's that the creator is the address of the account. Entrypoints, Storage is 0 and the Code is the the Michaelson code 
-
-https://tzkt.io/
-
-## Appendix
-
-Commands to run from the Terminal   
+* learned to install the necessary tools for smart contract development
+* ran the compiler and inpected the generated code
+* deployed your first smart contract to the Ghostnet and tested it.
 
 ---
 
