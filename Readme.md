@@ -216,19 +216,19 @@ The last line above gives us a link to the 'better-call.dev' tool, where we can 
 
 https://better-call.dev/ghostnet/KT1P43L56ADABdf4xHq2KdF1nK6n7irXn5Sq/operations
 
-This tool provides lot of information about the contract we just deployed. Let's first check that the creator is the address of our admin account. Then we want to see if it works as expected. Keep this tab open in your Webbrowser.
+This tool provides lot of information about the contract we just deployed. Let's first check izts address (starting with 'KT1..') and confirm that the creator is our admin account. Then we want to see if the code works as expected. Keep this tab open in your Webbrowser.
 
-For this will create a second account using the Kukai wallet. Create a password and download the keystore file when prompted. *Remember that all accounts we create in this workshop are throw-away accounts, for coding and testing on Ghostnet and nothing else.*  
+We will now make a second account using the Kukai wallet. Go to https://ghostnet.kukai.app/new-wallet and follow the instructions. Create a password and download the keystore file when prompted. *Remember that all accounts we create in this workshop are throw-away accounts, for coding and testing on Ghostnet and nothing else.*  
 
-Go to https://ghostnet.kukai.app/new-wallet and follow the instructions. Then find the button to copy the address of the wallet. Keep this tab also open. 
+Then find the button to copy the address of the wallet. Keep this tab also open. 
  
-In order to function correctly, this account should also get some (fake) tez. Go to https://faucet.ghostnet.teztnets.xyz/, paste the address copied in the last step into the textfield and click 'Request 100 tez'. Wait a little. 
+In order to work correctly, this account should also get some (fake) tez. Go to https://faucet.ghostnet.teztnets.xyz/, paste the address copied in the last step into the textfield and click 'Request 100 tez'. Wait a little. 
 
 Then, back in the 'better-call.dev' tool, select 'Interact' from the menu, then under 'Entrypoints' select 'increment', enter the number 1 into the 'increment' field and click 'Execute' to call the entry point of the smart contract. You will see a menu with some choices. Select 'Wallet'. 
 
-You will see 'Awaiting confirmation in Kukai Wallet'. Change to the tab with Kukai and confirm. You have to enter the password that you created for the encrypted keystore file while setting up the wallet. 
+You see 'Awaiting confirmation in Kukai Wallet'. Change to the tab with the Kukai wallet and confirm. You might have to enter the password that you created for the encrypted keystore file while setting up the wallet. 
 
-Now go back to 'better-call.dev'. If everything goes well, you see 'The transaction has successfully been broadcasted to the network.' Switch to the 'Storage' tab and you see the increased value in the contract. Finally, have a look at the 'Operations' tab and you can see the 'increment' operation you just called: every operation is recorded on the blockchain. 
+Now go back to 'better-call.dev'. If everything goes well, you see 'The transaction has successfully been broadcasted to the network.' Switch to the 'Storage' tab and you see the increased value in the contract. Finally, have a look at the 'Operations' tab and you can see the 'increment' endpoint that you just called: like every operation it is now recorded on the blockchain. 
 
 Congrats! 
 
