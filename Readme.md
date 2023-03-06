@@ -132,7 +132,7 @@ In general, we write the smart contract code in Archetype, compile it to Michels
 
 The Ghostnet is a copy of the real Tezos blockchain (which is called 'Mainnet') made for coding and testing. It does not carry any real value. Technically it is like the 'real' chain, therefore every transaction on Ghostnet requires an account.  
 
-Our scenario requires two roles: the first is the developer, who publishes the contract. This is also called the 'admin' of the contract. For this one, we use an account provided by Archetype. The second role is a user of the contract. We will create that one with a wallet in the webbrowser. 
+Our scenario requires two roles: the first one is the developer who publishes the contract. This is sometimes called the 'admin' of the contract. For the admin we use an account provided by Archetype. The second role is that of a user of the contract. That one we will create below with a wallet in the web browser. 
 
 First the admin account. In the Terminal, type:
 
@@ -216,7 +216,7 @@ The last line above gives us a link to the 'better-call.dev' tool, where we can 
 
 https://better-call.dev/ghostnet/KT1P43L56ADABdf4xHq2KdF1nK6n7irXn5Sq/operations
 
-This tool provides lot of information about the contract we just deployed. Let's first check its address (starting with 'KT1..') and confirm that the creator is our admin account. Then we want to see if the code works as expected. Keep this tab open in your Webbrowser.
+This tool provides lot of information about the contract we just deployed. Let's first check its address (starting with 'KT1..') and confirm that the creator is our admin account. Then we want to see if the code works as expected. Keep this tab open in your web browser.
 
 We will now make a second account using the Kukai wallet. Go to https://ghostnet.kukai.app/new-wallet and follow the instructions. Create a password and download the keystore file when prompted. *Remember that all accounts we create in this workshop are throw-away accounts, for coding and testing on Ghostnet and nothing else.*  
 
