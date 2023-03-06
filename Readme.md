@@ -1,4 +1,4 @@
-# "my first Tezos smart contract - Archetype edition"
+# "my first Tezos smart contract with Archetype - Mac edition"
 
 This short tutorial shows how to install the development tools and write a minimal Tezos smart contract with Archetype. You need a Mac (tested on an Intel MacBook Pro) and some patience during the installation steps.
 
@@ -73,7 +73,7 @@ entry reset() {
 }
 ```
 
-This smart contract here is for learning - all it does is to add and subtract two numbers. However, its basic structure helps to understand more complicated contract.
+This smart contract here is for learning - all it does is to add and subtract two numbers. Its basic structure helps us understanding more complicated contracts.
 
 First we tell Archetype the name of the contract: my_first_contract. Then we define a variable called `store` of type integer that will keep the current value. This is followed by the three functions that are the entry points of the contract. One adds‚ value to `store`, one subtracts from it and one resets `store` to 0. 
 
@@ -89,7 +89,7 @@ The Command Palette is a dropdown menu in Visual Studio Code that allows us to r
 
 Select `Archetype: Generate Michelson`. You will notice that a new file `my_first_contract.tz` is created. Take a look:
 
-```michaelson
+```michelson
 # 0
 {
   storage int;
@@ -208,7 +208,7 @@ Congrats: you have deployed your first smart contract.
 Http error response: (404)*    
 *If you get an error like this, go to the next step.*
 
-### Exploring the smart contract
+### Exploring the new smart contract
 
 The confirmation contains the address of the smart contract, starting with 'KT1..'.
 
@@ -216,14 +216,28 @@ The last line above gives us a link to the 'better-call.dev' tool, where we can 
 
 https://better-call.dev/ghostnet/KT1P43L56ADABdf4xHq2KdF1nK6n7irXn5Sq/operations
 
-This gives us a lot of information about the contract we just deployed. Let's check that the creator is the address of the account. Then, select 'Interact', and call the entry points of the smart contract. Convine yourself that it works as expected.
+This tool provides lot of information about the contract we just deployed. Let's first check that the creator is the address of our admin account. Then we want to see if it works as expected. Keep this tab open in your Webbrowser.
 
-Congrats: you have... 
+For this will create a second account using the Kukai wallet. *Remember that all accounts we create in this workshop are trow-away accounts, for coding and testing on Ghostnet and nothing else.*  
 
-* learned to install the necessary tools for smart contract development
-* ran the compiler and inpected the generated code
+Go to https://ghostnet.kukai.app/new-wallet and follow the instructions. Then find the button to copy the address of the wallet. Keep this tab also open. 
+ 
+In order to function correctly, this account should also get some (fake) tez. Go to https://faucet.ghostnet.teztnets.xyz/, paste the address copied in the last step into the textfield and click 'Request 100 tez'. Wait a little. 
+
+Then, back in the 'better-call.dev' tool, select 'Interact' from the menu, then under 'Entrypoints' select 'increment', enter the number 1 into the 'increment' field and click 'Execute' to call the entry point of the smart contract. You will see a menu with some choices. Select 'Wallet'. 
+
+You will see 'Awaiting confirmation in Kukai Wallet'. Change to the tab with Kukai and confirm. You have to enter the password you created for the encrypted keystore file while setting up the wallet. 
+
+Now go back to 'better-call.dev'. If everything goes well, you see 'The transaction has successfully been broadcasted to the network.' Switch to the 'Storage' tab and you see the increased value in the contract.
+
+Congrats! 
+
+You have... 
+
+* learned to install the necessary tools for Tezos smart contract development
+* created a smart contract with Archetype and inpected the generated code
 * deployed your first smart contract to the Ghostnet and tested it.
 
 ---
 
-This repository is part of an onging effort to support Tezos developers and encourage artists who want to learn about creative (blockchain)   coding that started during [hicathon](https://hicathon.xyz/). Published under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+This repository is part of an onging effort to support Tezos developers and encourage artists who want to learn about creative (blockchain) coding that started during [hicathon](https://hicathon.xyz/). Published under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
