@@ -168,7 +168,7 @@ We now have the three ingredients required to deploy our smart contract:
 
 * an account, provided by Archetype
 * the smart contract code
-* a (public) node that allows us to deploy the smart contract to the Ghostnet blockchain
+* a connection to a public blockchain node that allows us to deploy the smart contract to the Ghostnet 
 
 Let's deploy:
 
