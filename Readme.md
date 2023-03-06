@@ -162,7 +162,7 @@ Current network: ghost
 Current endpoint: https://ghostnet.ecadinfra.com
 ```
 
-### deploy the smart contract
+### Deploy the smart contract
 
 We now have the three ingredients required to deploy our smart contract:
 
@@ -208,7 +208,7 @@ Congrats: you have deployed your first smart contract.
 Http error response: (404)*    
 *If you get an error like this, go to the next step.*
 
-### Exploring the new smart contract
+### Explore the new smart contract
 
 The confirmation contains the address of the smart contract, starting with 'KT1..'.
 
@@ -216,7 +216,7 @@ The last line above gives us a link to the 'better-call.dev' tool, where we can 
 
 https://better-call.dev/ghostnet/KT1P43L56ADABdf4xHq2KdF1nK6n7irXn5Sq/operations
 
-This tool provides lot of information about the contract we just deployed. Let's first check izts address (starting with 'KT1..') and confirm that the creator is our admin account. Then we want to see if the code works as expected. Keep this tab open in your Webbrowser.
+This tool provides lot of information about the contract we just deployed. Let's first check its address (starting with 'KT1..') and confirm that the creator is our admin account. Then we want to see if the code works as expected. Keep this tab open in your Webbrowser.
 
 We will now make a second account using the Kukai wallet. Go to https://ghostnet.kukai.app/new-wallet and follow the instructions. Create a password and download the keystore file when prompted. *Remember that all accounts we create in this workshop are throw-away accounts, for coding and testing on Ghostnet and nothing else.*  
 
